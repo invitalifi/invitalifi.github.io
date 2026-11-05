@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糖心御梦子-糖心御梦子主题合集_糖心御梦子作品与下载</title>
+<meta name="description" content="糖心御梦子主题首页，汇总糖心御梦子相关作品介绍、主题资源与下载入口，帮助访问者快速了解糖心御梦子的内容方向与使用方式。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8fb1'/%3E%3Cstop offset='1' stop-color='%238a6cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2319112e'/%3E%3Cpath d='M32 14c6 7 9 11 9 17a9 9 0 0 1-18 0c0-6 3-10 9-17z' fill='url(%23g)'/%3E%3Ccircle cx='32' cy='33' r='4' fill='%23fff5fa'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0d0a18;
+    --bg-soft:#151026;
+    --card:#1b1430;
+    --line:rgba(255,255,255,.09);
+    --text:#f3eefc;
+    --muted:#b7aecd;
+    --pink:#ff8fb1;
+    --violet:#9b7bff;
+    --grad:linear-gradient(120deg,#ff8fb1,#9b7bff);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:radial-gradient(1200px 600px at 80% -10%,rgba(155,123,255,.22),transparent 60%),
+               radial-gradient(900px 500px at 0% 10%,rgba(255,143,177,.16),transparent 55%),
+               var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* 页头 */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(13,10,24,.78);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.06rem;letter-spacing:.02em}
+  .brand .mark{width:38px;height:38px;flex:0 0 auto}
+  .brand span.brandtext{
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+    font-size:1.05rem;white-space:nowrap;
+  }
+  .navlinks{display:flex;align-items:center;gap:26px;font-size:.94rem;color:var(--muted)}
+  .navlinks a{position:relative;padding:4px 0;transition:color .2s}
+  .navlinks a:hover{color:var(--text)}
+  .navlinks a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;border-radius:2px;
+    background:var(--grad);transition:width .25s;
+  }
+  .navlinks a:hover::after{width:100%}
+  .nav-cta{
+    font-size:.9rem;padding:9px 18px;border-radius:999px;
+    background:var(--grad);color:#1a1030;font-weight:700;white-space:nowrap;
+    transition:transform .2s,box-shadow .2s;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(155,123,255,.35)}
+  .menutoggle{display:none}
+
+  /* 首屏 */
+  .hero{padding:78px 0 64px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.8rem;letter-spacing:.12em;color:var(--pink);
+    border:1px solid rgba(255,143,177,.35);border-radius:999px;padding:6px 14px;
+    background:rgba(255,143,177,.08);margin-bottom:22px;
+  }
+  h1{
+    font-size:clamp(2.2rem,5vw,3.5rem);
+    line-height:1.15;letter-spacing:.01em;font-weight:800;
+    background:linear-gradient(115deg,#fff 20%,#ffc8da 55%,#c3b0ff 90%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:20px;
+  }
+  .lead{color:var(--muted);font-size:1.03rem;max-width:34em;margin-bottom:30px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 26px;border-radius:999px;font-weight:700;font-size:.96rem;
+    transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .btn-primary{background:var(--grad);color:#1a1030}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(155,123,255,.4)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+  .btn-ghost:hover{background:rgba(255,255,255,.07)}
+  .btn[aria-disabled="true"]{opacity:.9;cursor:default}
+  .hero-note{margin-top:20px;font-size:.84rem;color:#8f86a8}
+
+  .hero-art{
+    position:relative;border-radius:26px;overflow:hidden;
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,rgba(255,143,177,.14),rgba(155,123,255,.12));
+    padding:26px;
+    box-shadow:0 30px 70px -30px rgba(155,123,255,.55);
+  }
+  .hero-art svg{width:100%;height:auto}
+  .art-caption{
+    margin-top:16px;font-size:.8rem;color:#a79ec0;text-align:center;letter-spacing:.04em;
+  }
+
+  /* 通用区块 */
+  section{padding:64px 0}
+  .sec-head{margin-bottom:36px;max-width:46em}
+  .sec-tag{font-size:.78rem;letter-spacing:.16em;color:var(--violet);text-transform:uppercase;margin-bottom:10px}
+  h2{font-size:clamp(1.45rem,2.6vw,1.95rem);font-weight:800;letter-spacing:.01em}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:.97rem}
+
+  /* 卡片 */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{
+    background:linear-gradient(170deg,var(--card),var(--bg-soft));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;transition:transform .25s,border-color .25s;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(255,143,177,.35)}
+  .card .ico{
+    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:rgba(255,143,177,.12);margin-bottom:16px;
+  }
+  .card h3{font-size:1.06rem;font-weight:700;margin-bottom:9px}
+  .card p{font-size:.91rem;color:var(--muted)}
+
+  /* 列表区 */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .steps{list-style:none;display:flex;flex-direction:column;gap:18px}
+  .steps li{
+    display:grid;grid-template-columns:34px 1fr;gap:14px;
+    padding:16px 18px;border:1px solid var(--line);border-radius:14px;
+    background:rgba(255,255,255,.025);
+  }
+  .steps .num{
+    width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+    background:var(--grad);color:#1a1030;font-weight:800;font-size:.86rem;
+  }
+  .steps b{display:block;font-size:.98rem;margin-bottom:3px}
+  .steps span{font-size:.88rem;color:var(--muted)}
+
+  .panel{
+    background:linear-gradient(165deg,rgba(155,123,255,.14),rgba(255,143,177,.06));
+    border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  }
+  .panel h3{font-size:1.1rem;margin-bottom:14px}
+  .panel ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .panel li{
+    display:flex;gap:10px;font-size:.92rem;color:var(--muted);
+    padding-bottom:12px;border-bottom:1px dashed rgba(255,255,255,.08);
+  }
+  .panel li:last-child{border-bottom:0;padding-bottom:0}
+  .dot{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--pink);margin-top:9px}
+
+  /* FAQ */
+  .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .qa{
+    border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+    background:rgba(255,255,255,.025);
+  }
+  .qa h3{font-size:.98rem;margin-bottom:8px;color:#ffe4ee}
+  .qa p{font-size:.9rem;color:var(--muted)}
+
+  /* 下载区 */
+  .download{
+    border-radius:24px;padding:44px 36px;text-align:center;
+    background:linear-gradient(130deg,rgba(255,143,177,.16),rgba(155,123,255,.18));
+    border:1px solid rgba(255,143,177,.28);
+    position:relative;overflow:hidden;
+  }
+  .download::before{
+    content:"";position:absolute;inset:-40% -10% auto auto;width:340px;height:340px;
+    background:radial-gradient(circle,rgba(155,123,255,.4),transparent 70%);
+    filter:blur(10px);
+  }
+  .download h2{position:relative}
+  .download p{position:relative;color:var(--muted);margin:14px auto 26px;max-width:38em;font-size:.95rem}
+  .download .btn{position:relative}
+
+  /* 页尾 */
+  footer{
+    border-top:1px solid var(--line);padding:38px 0 30px;margin-top:20px;
+    color:var(--muted);font-size:.86rem;
+  }
+  .foot-top{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;margin-bottom:20px}
+  .foot-nav{display:flex;flex-wrap:wrap;gap:20px}
+  .foot-nav a:hover{color:var(--text)}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text)}
+  .foot-brand .mark{width:30px;height:30px}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:#8c83a6}
+
+  /* 响应式 */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .hero{padding:52px 0 44px}
+    .cards{grid-template-columns:1fr 1fr}
+    .split{grid-template-columns:1fr;gap:26px}
+    .faq{grid-template-columns:1fr}
+  }
+  @media (max-width:720px){
+    .navlinks{
+      display:none;position:absolute;top:70px;left:0;right:0;
+      flex-direction:column;gap:0;background:rgba(13,10,24,.97);
+      border-bottom:1px solid var(--line);padding:8px 22px 18px;
+    }
+    .navlinks.open{display:flex}
+    .navlinks a{padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.05)}
+    .navlinks a::after{display:none}
+    .menutoggle{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:40px;height:40px;border-radius:10px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;
+    }
+    .nav{gap:10px}
+    .nav-cta{display:none}
+    .cards{grid-template-columns:1fr}
+    section{padding:46px 0}
+    .download{padding:34px 22px}
+    h1{font-size:clamp(1.9rem,8vw,2.6rem)}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="糖心御梦子首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff8fb1"/>
+            <stop offset="1" stop-color="#9b7bff"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="16" fill="#1a1130"/>
+        <path d="M32 13c6.5 7.5 9.5 11.8 9.5 17.6a9.5 9.5 0 0 1-19 0C22.5 24.8 25.5 20.5 32 13z" fill="url(#bg1)"/>
+        <circle cx="32" cy="32" r="4.2" fill="#fff5fa"/>
+      </svg>
+      <span class="brandtext">糖心御梦子</span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="主导航">
+      <a href="#intro">主题概览</a>
+      <a href="#modules">内容分区</a>
+      <a href="#guide">使用路径</a>
+      <a href="#faq">常见问题</a>
+      <a href="#download">获取资源</a>
+    </nav>
+    <a class="nav-cta" href="#download">获取主题</a>
+    <button class="menutoggle" id="menutoggle" aria-label="展开导航" aria-expanded="false" aria-controls="navlinks">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页 · 资源导航</span>
+        <h1>糖心御梦子</h1>
+        <p class="lead">
+          糖心御梦子是一个以甜美梦境为视觉基调的主题合集页面，收录糖心御梦子的内容介绍、分区导航与资源入口。这里把零散的信息整理成清晰的浏览路径，方便你按需查找作品介绍、视觉风格说明与下载方式。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#modules">
+            浏览内容分区
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#guide">查看使用路径</a>
+        </div>
+        <p class="hero-note">页面内容以主题介绍与资源导航为主，下载入口位于页面底部。</p>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 420 320" role="img" aria-label="糖心御梦子主题视觉：星夜与糖心图形">
+          <defs>
+            <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff8fb1"/>
+              <stop offset="1" stop-color="#9b7bff"/>
+            </linearGradient>
+            <radialGradient id="hg2" cx="50%" cy="45%" r="60%">
+              <stop offset="0" stop-color="#ffe1ec" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#ffe1ec" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="210" cy="140" r="108" fill="url(#hg2)" opacity=".5"/>
+          <circle cx="210" cy="140" r="78" fill="none" stroke="rgba(255,255,255,.18)" stroke-dasharray="3 7"/>
+          <circle cx="210" cy="140" r="104" fill="none" stroke="rgba(255,255,255,.1)"/>
+          <path d="M210 78c14 17 21 26 21 39a21 21 0 0 1-42 0c0-13 7-22 21-39z" fill="url(#hg1)"/>
+          <circle cx="210" cy="120" r="7" fill="#fff6fa"/>
+          <path d="M112 196c22-6 34 8 34 22s-13 24-30 24-28-10-28-24c0-9 6-17 24-22z" fill="rgba(255,143,177,.22)"/>
+          <path d="M300 204c18-5 28 7 28 18s-11 20-25 20-23-8-23-20c0-8 5-14 20-18z" fill="rgba(155,123,255,.24)"/>
+          <g fill="#fff" opacity=".85">
+            <circle cx="86" cy="82" r="2.2"/>
+            <circle cx="340" cy="70" r="1.8"/>
+            <circle cx="330" cy="150" r="2.4"/>
+            <circle cx="72" cy="160" r="1.6"/>
+            <circle cx="150" cy="52" r="1.8"/>
+            <circle cx="272" cy="46" r="2"/>
+          </g>
+          <path d="M60 258h300" stroke="rgba(255,255,255,.12)" stroke-linecap="round"/>
+          <path d="M96 272h228" stroke="rgba(255,255,255,.07)" stroke-linecap="round"/>
+        </svg>
+        <p class="art-caption">星夜与糖心 · 主题视觉示意</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主题概览 -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">Overview</p>
+        <h2>糖心御梦子是什么</h2>
+        <p>糖心御梦子以“甜、柔、梦幻”为核心表达，页面将主题相关的内容拆成可独立阅读的几个部分。无论你是第一次接触糖心御梦子，还是想快速找到某一块资源，都可以从下面的分区直接进入。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff8fb1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l2.6 5.6L21 9.5l-4.5 4.3L17.6 20 12 17l-5.6 3 1.1-6.2L3 9.5l6.4-.9L12 3z"/>
+            </svg>
+          </div>
+          <h3>主题定位</h3>
+          <p>糖心御梦子的整体风格偏向柔和梦幻，配色以粉紫为主，适合喜欢甜美视觉氛围的访问者浏览与收藏。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b7bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="3"/>
+              <path d="M3 9h18M8 14h4"/>
+            </svg>
+          </div>
+          <h3>内容组织</h3>
+          <p>页面按概览、分区、使用路径、常见问题与获取入口排列，糖心御梦子的信息按阅读顺序逐层展开，减少来回跳转。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff8fb1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 20h16"/>
+            </svg>
+          </div>
+          <h3>资源入口</h3>
+          <p>下载入口集中放在页面末段，糖心御梦子的主题资源通过单一按钮进入，避免在正文中插入多余跳转。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容分区 -->
+  <section id="modules">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">Sections</p>
+        <h2>糖心御梦子的内容分区</h2>
+        <p>每个分区承担不同的阅读任务：有的帮你建立整体印象，有的提供具体操作步骤，有的集中回答常见疑问。你可以按兴趣挑着看，也可以顺序读完。</p>
+      </div>
+      <div class="split">
+        <ol class="steps">
+          <li>
+            <span class="num">1</span>
+            <div>
+              <b>主题概览</b>
+              <span>用一段话说明糖心御梦子的风格与用途，帮助新访客在十秒内判断是否继续浏览。</span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div>
+              <b>视觉与风格说明</b>
+              <span>描述糖心御梦子的配色、图形元素与版式倾向，方便做参考或二次创作时对照。</span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div>
+              <b>使用路径</b>
+              <span>从浏览到获取的完整流程，糖心御梦子的资源入口在流程末端，步骤清晰可循。</span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4</span>
+            <div>
+              <b>常见问题</b>
+              <span>汇总访问者最常问的几类问题，糖心御梦子的适用范围与限制在此统一说明。</span>
+            </div>
+          </li>
+        </ol>
+        <div class="panel">
+          <h3>风格要点速览</h3>
+          <ul>
+            <li><span class="dot"></span><span>主色为粉与紫的渐变，搭配深色底，形成柔和中带层次的观感。</span></li>
+            <li><span class="dot"></span><span>图形以糖心、星点与柔光为主，线条简洁，避免过度堆叠装饰。</span></li>
+            <li><span class="dot"></span><span>版式采用卡片与分区结合，糖心御梦子的信息块之间留白充足，阅读不压抑。</span></li>
+            <li><span class="dot"></span><span>移动端优先保留主题文字与核心入口，装饰视觉自动缩小或不展示。</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用路径 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">Workflow</p>
+        <h2>如何浏览与获取糖心御梦子</h2>
+        <p>页面把访问路径拆成三步，按顺序操作即可完成从了解到获取的过程。糖心御梦子的下载按钮当前为占位状态，真实地址将在后续替换。</p>
+      </div>
+      <div class="split">
+        <ol class="steps">
+          <li>
+            <span class="num">1</span>
+            <div>
+              <b>先看概览与风格</b>
+              <span>阅读首屏与主题概览，确认糖心御梦子的内容方向是否符合你的需求。</span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div>
+              <b>按分区深入</b>
+              <span>通过导航跳到内容分区或常见问题，糖心御梦子的细节说明集中在对应区块。</span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div>
+              <b>进入下载入口</b>
+              <span>在页面底部点击下载按钮获取糖心御梦子的主题资源，按钮状态会在地址可用时更新。</span>
+            </div>
+          </li>
+        </ol>
+        <div class="panel">
+          <h3>浏览建议</h3>
+          <ul>
+            <li><span class="dot"></span><span>首次访问可从头顺序阅读，糖心御梦子的信息按由浅入深排列。</span></li>
+            <li><span class="dot"></span><span>只想找下载入口的访客，可直接使用页头按钮跳至末段。</span></li>
+            <li><span class="dot"></span><span>做风格参考时，重点看视觉说明与分区中的卡片示例。</span></li>
+            <li><span class="dot"></span><span>遇到疑问先查常见问题，糖心御梦子的适用范围在那里有集中说明。</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">FAQ</p>
+        <h2>关于糖心御梦子的常见问题</h2>
+        <p>以下问题来自访问过程中最常被提到的几类，回答仅针对本页提供的糖心御梦子内容。</p>
+      </div>
+      <div class="faq">
+        <div class="qa">
+          <h3>糖心御梦子适合哪些人浏览？</h3>
+          <p>适合对甜美梦幻风格感兴趣、希望快速了解主题内容或寻找资源入口的访问者。</p>
+        </div>
+        <div class="qa">
+          <h3>页面里的下载按钮现在能用吗？</h3>
+          <p>当前下载按钮为占位状态，点击不会跳转。糖心御梦子的真实地址会在后续更新替换。</p>
+        </div>
+        <div class="qa">
+          <h3>内容会持续补充吗？</h3>
+          <p>页面结构已按主题分区固定，糖心御梦子的具体条目会随着资料完善陆续补充。</p>
+        </div>
+        <div class="qa">
+          <h3>可以在手机上阅读吗？</h3>
+          <p>可以。页面针对小屏调整了导航、字号与卡片排列，糖心御梦子的首屏文字在手机上优先展示。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download">
+    <div class="wrap">
+      <div class="download">
+        <h2>获取糖心御梦子主题资源</h2>
+        <p>糖心御梦子的主题资源统一从这里进入。按钮当前处于占位状态，真实下载地址确定后会替换为可点击链接，页面其他内容不受影响。</p>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="foot-brand" href="#top">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff8fb1"/>
+              <stop offset="1" stop-color="#9b7bff"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="16" fill="#1a1130"/>
+          <path d="M32 13c6.5 7.5 9.5 11.8 9.5 17.6a9.5 9.5 0 0 1-19 0C22.5 24.8 25.5 20.5 32 13z" fill="url(#bg2)"/>
+          <circle cx="32" cy="32" r="4.2" fill="#fff5fa"/>
+        </svg>
+        糖心御梦子
+      </a>
+      <nav class="foot-nav" aria-label="页尾导航">
+        <a href="#intro">主题概览</a>
+        <a href="#modules">内容分区</a>
+        <a href="#guide">使用路径</a>
+        <a href="#faq">常见问题</a>
+        <a href="#download">获取资源</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>糖心御梦子 · 主题首页</span>
+      <span>页面内容以主题介绍与资源导航为主，下载地址待更新。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menutoggle');
+    var links = document.getElementById('navlinks');
+    if(!toggle || !links) return;
+    toggle.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
